@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- link to bootstrap file so it can run through all your other fies-->
+    <link rel="stylesheet" href="#">
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-brand" href="{% url 'index' %}"></a>BRAND</li>
+          <li><a class="navbar-link" href="{% url 'admin:index'%}"></a>Admin</li>
+          <li><a class="navbar-link" href="{% url 'basic_app:other'%}"></a>Other</li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      {% block body_block %}
+        <!--Anything outside of this will be inherited if you extend!-->
+
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>
